@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/shape_button_rounded.xml" value="0.1345" />
         <entry key="app/src/main/res/drawable/white_border_shape_button_rounded.xml" value="0.1345" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.1157548125633232" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.1157548125633232" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1157548125633232" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1157548125633232" />
       </map>

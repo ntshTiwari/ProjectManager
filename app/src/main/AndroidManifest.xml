@@ -14,10 +14,15 @@
         android:theme="@style/Theme.ProjectManager"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".SignInActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
                 All the activities defined in the project need to be mentioned here,
             it gets added automatically when we create an activity
