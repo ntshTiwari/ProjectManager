@@ -1,9 +1,10 @@
-package com.example.projectmanager
+package com.example.projectmanager.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.widget.Toolbar
+import com.example.projectmanager.R
 
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

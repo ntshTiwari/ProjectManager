@@ -1,4 +1,4 @@
-package com.example.projectmanager
+package com.example.projectmanager.activities
 
 import android.content.Intent
 import android.graphics.Typeface
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import android.widget.TextView
+import com.example.projectmanager.R
 
 
 class SplashActivity : AppCompatActivity() {
