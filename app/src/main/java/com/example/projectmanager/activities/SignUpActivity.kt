@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.projectmanager.R
 import com.example.projectmanager.databinding.ActivitySignUpBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class SignUpActivity : BaseActivity() {
     private var binding: ActivitySignUpBinding? = null
@@ -51,7 +53,26 @@ class SignUpActivity : BaseActivity() {
         val password: String = binding!!.etPassword.text.toString().trim { it <= ' ' }
 
         if (validateForm(name, email, password)) {
-
+            showProgressDialog("Signing up...")
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                email, password
+            ).addOnCompleteListener {
+                    task ->
+                        hideProgressDialog()
+                        if(task.isSuccessful){
+                            Toast.makeText(
+                                this@SignUpActivity,
+                                "User created",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                this@SignUpActivity,
+                                task.exception!!.message,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+            }
             //// signup
         }
     }
